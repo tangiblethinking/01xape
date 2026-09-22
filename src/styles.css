@@ -1,0 +1,278 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-muted: var(--fg-muted);
+  --color-subtle: var(--fg-subtle);
+  --color-primary: var(--accent);
+  --color-primary-foreground: var(--accent-fg);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-glass: var(--glass);
+  --color-glass-border: var(--glass-border);
+  --color-heat: var(--heat);
+
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-pill: 999px;
+
+  --shadow-glass: var(--shadow-glass-value);
+  --shadow-glass-hover: var(--shadow-glass-hover-value);
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.22, 1.2, 0.36, 1);
+}
+
+:root {
+  --bg: #f3f1eb;
+  --fg: #121214;
+  --fg-muted: #5c5a56;
+  --fg-subtle: #8a8780;
+  --accent: #121214;
+  --accent-fg: #f3f1eb;
+  --border: color-mix(in oklab, var(--fg) 12%, transparent);
+  --ring: color-mix(in oklab, var(--fg) 40%, transparent);
+  --glass: color-mix(in oklab, #ffffff 62%, transparent);
+  --glass-border: color-mix(in oklab, #ffffff 78%, transparent);
+  --heat: #c45c32;
+  --shadow-glass-value:
+    0 0 0 1px color-mix(in oklab, #ffffff 70%, transparent),
+    inset 0 1px 0 color-mix(in oklab, #ffffff 80%, transparent),
+    0 10px 40px color-mix(in oklab, #121214 8%, transparent);
+  --shadow-glass-hover-value:
+    0 0 0 1px color-mix(in oklab, #ffffff 86%, transparent),
+    inset 0 1px 0 color-mix(in oklab, #ffffff 90%, transparent),
+    0 16px 50px color-mix(in oklab, #121214 12%, transparent);
+  --glass-blur: 28px;
+}
+
+html.dark {
+  --bg: #08080a;
+  --fg: #f3f1eb;
+  --fg-muted: #b4b0a8;
+  --fg-subtle: #7e7b74;
+  --accent: #f3f1eb;
+  --accent-fg: #08080a;
+  --border: color-mix(in oklab, var(--fg) 14%, transparent);
+  --ring: color-mix(in oklab, var(--fg) 50%, transparent);
+  --glass: color-mix(in oklab, #141416 54%, transparent);
+  --glass-border: color-mix(in oklab, #ffffff 14%, transparent);
+  --heat: #e08a62;
+  --shadow-glass-value:
+    0 0 0 1px color-mix(in oklab, #ffffff 12%, transparent),
+    inset 0 1px 0 color-mix(in oklab, #ffffff 16%, transparent),
+    0 18px 50px color-mix(in oklab, #000000 45%, transparent);
+  --shadow-glass-hover-value:
+    0 0 0 1px color-mix(in oklab, #ffffff 20%, transparent),
+    inset 0 1px 0 color-mix(in oklab, #ffffff 22%, transparent),
+    0 22px 60px color-mix(in oklab, #000000 55%, transparent);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--bg);
+    color: var(--fg);
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    min-height: 100dvh;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--fg);
+    color: var(--bg);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  img.media {
+    outline: 1px solid color-mix(in oklab, var(--fg) 10%, transparent);
+    outline-offset: -1px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+}
+
+@utility glass {
+  background: var(--glass);
+  backdrop-filter: blur(var(--glass-blur)) saturate(1.65);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(1.65);
+  box-shadow: var(--shadow-glass-value);
+}
+
+@utility glass-tight {
+  background: color-mix(in oklab, var(--glass) 80%, var(--bg));
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  box-shadow: var(--shadow-glass-value);
+}
+
+@utility specular {
+  position: relative;
+}
+
+.specular::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, #ffffff 28%, transparent),
+    transparent 42%
+  );
+  opacity: 0.55;
+}
+
+html.dark .specular::before {
+  opacity: 0.28;
+}
+
+@utility mask-fade-left {
+  mask-image: linear-gradient(90deg, transparent, black 28%);
+}
+
+@utility font-sans {
+  font-family: var(--font-sans);
+}
+
+@utility font-mono {
+  font-family: var(--font-mono);
+}
+
+.apex-noise {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  opacity: 0.045;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+}
+
+html.dark .apex-noise {
+  opacity: 0.07;
+}
+
+.marquee-track {
+  animation: marquee 42s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.reveal {
+  animation: reveal-up 700ms var(--ease-out-soft) both;
+}
+
+.reveal-d1 {
+  animation-delay: 80ms;
+}
+.reveal-d2 {
+  animation-delay: 160ms;
+}
+.reveal-d3 {
+  animation-delay: 240ms;
+}
+.reveal-d4 {
+  animation-delay: 320ms;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.scan-line {
+  background: linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--fg) 22%, transparent),
+    transparent
+  );
+  animation: scan 1.8s var(--ease-out-soft) infinite;
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(220%);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .reveal,
+  .scan-line {
+    animation: none !important;
+    filter: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
