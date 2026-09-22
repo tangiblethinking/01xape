@@ -10,10 +10,10 @@ const SRC: Record<MarkVariant, string> = {
 };
 
 const RATIO: Record<MarkVariant, string> = {
-  icon: "aspect-[737/877]",
-  x: "aspect-[635/881]",
-  wordmark: "aspect-[1189/424]",
-  lockup: "aspect-[1413/586]",
+  icon: "aspect-[554/482]",
+  x: "aspect-[554/482]",
+  wordmark: "aspect-[1156/482]",
+  lockup: "aspect-[1156/482]",
 };
 
 export function BrandMark({
