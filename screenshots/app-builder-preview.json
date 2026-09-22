@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "APE X — Let your customers find you",
+      "hasCanvas": false,
+      "bodyTextLen": 4267,
+      "bodyTextHash": "4ffa2743d51e57a2de11f1904a909ed100af4dd19c6917bff01687585bc6703e",
+      "bodyTextPrefix": "Skip to content APE X Services Case Studies Resources Pricing Me",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "APE X — Let your customers find you",
+      "hasCanvas": false,
+      "bodyTextLen": 4202,
+      "bodyTextHash": "8fc8d9fdeec5f9f081855365aab9013cc0ce0d296cf426b3e4888c01b5037a3b",
+      "bodyTextPrefix": "Skip to content APE X AEO · GEO · SEO · EXPERIENCE DESIGN When b",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

@@ -1,0 +1,45 @@
+# APE X
+
+> Experience design and Answer Engine Optimization studio. We make sure that when buyers ask AI who to trust, the answer is you.
+
+- Legal / brand name: APE X (always written as "APE X", never APEX or APE-X)
+- Site: https://uxapex.com
+- Founder: Christopher Kenreigh
+- Category: Professional service — AEO (Answer Engine Optimization), GEO (Generative Engine Optimization), SEO, digital product / UX, UI systems
+- Audience: Consumer brands that sell online (DTC, subscription, marketplace, consumer apps). Global practice, USA focus.
+- Primary CTA: Discovery Audit at https://uxapex.com/audit — required before any sales conversation
+- Email: hello@uxapex.com
+- Tagline: Let your customers find you. Experience design that meets customers where they are.
+- Hero question: When buyers ask AI and search engines for recommendations, does your brand show up—or your competitors?
+
+## Offers
+
+- AI Visibility & Growth Blueprint (project): 30–45 days, typically $8,500–$22,000. Audit, prompt mining, competitor gaps, technical/content blueprint.
+- Ongoing AEO/GEO/SEO retainer: typically $4,000–$12,000 / month, 6-month minimum.
+
+## Services
+
+- AI Search: citation optimization, conversational intent mapping, Share of Voice, off-site authority
+- Technical SEO: crawl, JS render, schema/entity JSON-LD, Core Web Vitals, semantic HTML
+- Content architecture: information gain, fact-density, E-E-A-T, authorship
+- Research: generative visibility audits, synthetic query mining, competitor adjacency
+- Brand entity: Wikidata, knowledge panels, co-occurrence on Reddit/Quora/Stack Overflow
+- Discovery: visual SEO, local entities, ASO
+
+## Name
+
+APE X is a play on "apex." Humans are the current apex ape. The X is the unknown variable — the next iteration already in the room (retrieval models that answer before a homepage loads).
+
+## Pages
+
+- [Home](https://uxapex.com/)
+- [Services](https://uxapex.com/services)
+- [AI Search](https://uxapex.com/services/ai-search)
+- [Technical SEO](https://uxapex.com/services/technical-seo)
+- [Content Architecture](https://uxapex.com/services/content-architecture)
+- [Case Studies](https://uxapex.com/work)
+- [Resources](https://uxapex.com/resources)
+- [Pricing](https://uxapex.com/pricing)
+- [Methodology](https://uxapex.com/methodology)
+- [Discovery Audit](https://uxapex.com/audit)
+- [Contact](https://uxapex.com/contact)
