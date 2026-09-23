@@ -27,23 +27,18 @@ function Home() {
       <JsonLd data={[orgJsonLd(), websiteJsonLd(), faqJsonLd()]} />
 
       <section className="relative overflow-hidden px-5 pt-4 pb-16 sm:px-8 sm:pt-8 sm:pb-24">
-        <img
-          src="/brand/mascot-cinematic.jpg"
-          alt=""
-          aria-hidden="true"
-          className="mask-fade-left pointer-events-none absolute -top-16 -right-20 hidden h-[44rem] w-auto brightness-125 contrast-125 mix-blend-screen sm:block dark:opacity-100"
-        />
-        <BrandMark
-          variant="icon"
-          className="pointer-events-none absolute -right-10 top-8 h-[22rem] w-[18rem] opacity-20 dark:hidden"
-          alt=""
-        />
         <BrandMark
           variant="x"
           className="pointer-events-none absolute top-8 -left-4 h-40 w-28 opacity-20 sm:h-56 sm:w-40"
           alt=""
         />
         <div className="relative mx-auto max-w-6xl">
+          <img
+            src="/brand/mascot-cinematic.jpg"
+            alt=""
+            aria-hidden="true"
+            className="mask-fade-left pointer-events-none absolute top-[-4.5rem] left-[min(36rem,52%)] hidden h-[44rem] w-auto max-w-none invert contrast-125 brightness-110 mix-blend-multiply sm:block dark:invert-0 dark:brightness-125 dark:contrast-125 dark:mix-blend-screen"
+          />
           <p className="reveal text-xs font-medium tracking-[0.22em] text-muted uppercase">
             AEO · GEO · SEO · Experience design
           </p>
