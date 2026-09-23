@@ -34,7 +34,7 @@ function Home() {
         />
         <div className="relative mx-auto max-w-6xl">
           <img
-            src="/brand/mascot-cinematic-light.jpg"
+            src="/brand/mascot-cinematic-light.png"
             alt=""
             aria-hidden="true"
             className="mask-fade-left pointer-events-none absolute top-[-4.5rem] left-[min(36rem,52%)] hidden h-[44rem] w-auto max-w-none sm:block dark:hidden"
