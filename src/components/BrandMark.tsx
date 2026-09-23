@@ -53,7 +53,7 @@ export function WordmarkText({ className }: { className?: string }) {
   return (
     <span
       className={cn(
-        "font-display font-extrabold tracking-[-0.04em] text-foreground",
+        "font-display font-extrabold tracking-[-0.012em] text-foreground",
         className,
       )}
     >

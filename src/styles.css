@@ -39,7 +39,7 @@
   --bg: #f3f1eb;
   --fg: #121214;
   --fg-muted: #5c5a56;
-  --fg-subtle: #8a8780;
+  --fg-subtle: #5c5a56;
   --accent: #121214;
   --accent-fg: #f3f1eb;
   --border: color-mix(in oklab, var(--fg) 12%, transparent);
@@ -62,7 +62,7 @@ html.dark {
   --bg: #08080a;
   --fg: #f3f1eb;
   --fg-muted: #b4b0a8;
-  --fg-subtle: #7e7b74;
+  --fg-subtle: #a8a49c;
   --accent: #f3f1eb;
   --accent-fg: #08080a;
   --border: color-mix(in oklab, var(--fg) 14%, transparent);
@@ -87,6 +87,9 @@ html.dark {
     background: var(--bg);
     color: var(--fg);
     color-scheme: light;
+    letter-spacing: 0.012em;
+    word-spacing: 0.04em;
+    font-optical-sizing: auto;
   }
 
   html.dark {
@@ -115,10 +118,15 @@ html.dark {
   h3 {
     text-wrap: balance;
     font-family: var(--font-display);
+    letter-spacing: -0.012em;
+    line-height: 1.18;
+    font-optical-sizing: auto;
   }
 
-  p {
+  p, li, dd, dt {
     text-wrap: pretty;
+    letter-spacing: 0.012em;
+    line-height: 1.65;
   }
 
   img.media {

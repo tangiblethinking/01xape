@@ -29,7 +29,7 @@ export function PageHero({
             {kicker}
           </p>
         ) : null}
-        <h1 className="mt-3 max-w-4xl font-display text-4xl leading-[1.05] font-extrabold tracking-[-0.04em] sm:text-6xl">
+        <h1 className="mt-3 max-w-4xl font-display text-4xl leading-[1.18] font-extrabold tracking-[-0.012em] sm:text-6xl">
           {title}
         </h1>
         {dek ? (
