@@ -34,10 +34,16 @@ function Home() {
         />
         <div className="relative mx-auto max-w-6xl">
           <img
+            src="/brand/mascot-cinematic-light.jpg"
+            alt=""
+            aria-hidden="true"
+            className="mask-fade-left pointer-events-none absolute top-[-4.5rem] left-[min(36rem,52%)] hidden h-[44rem] w-auto max-w-none sm:block dark:hidden"
+          />
+          <img
             src="/brand/mascot-cinematic.jpg"
             alt=""
             aria-hidden="true"
-            className="mask-fade-left pointer-events-none absolute top-[-4.5rem] left-[min(36rem,52%)] hidden h-[44rem] w-auto max-w-none invert contrast-125 brightness-110 mix-blend-multiply sm:block dark:invert-0 dark:brightness-125 dark:contrast-125 dark:mix-blend-screen"
+            className="mask-fade-left pointer-events-none absolute top-[-4.5rem] left-[min(36rem,52%)] hidden h-[44rem] w-auto max-w-none brightness-125 contrast-125 mix-blend-screen dark:sm:block"
           />
           <p className="reveal text-xs font-medium tracking-[0.22em] text-muted uppercase">
             AEO · GEO · SEO · Experience design
