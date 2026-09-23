@@ -30,6 +30,7 @@ function Home() {
         <img
           src="/brand/mascot-cinematic.jpg"
           alt=""
+          aria-hidden="true"
           className="mask-fade-left pointer-events-none absolute -top-16 -right-20 hidden h-[44rem] w-auto brightness-125 contrast-125 mix-blend-screen sm:block dark:opacity-100"
         />
         <BrandMark
@@ -46,7 +47,7 @@ function Home() {
           <p className="reveal text-xs font-medium tracking-[0.22em] text-muted uppercase">
             AEO · GEO · SEO · Experience design
           </p>
-          <h1 className="reveal reveal-d1 mt-5 max-w-5xl font-display text-[2.35rem] leading-[1.02] font-extrabold tracking-[-0.045em] sm:text-6xl lg:text-7xl">
+          <h1 className="reveal reveal-d1 mt-5 max-w-5xl font-display text-[2.35rem] leading-[1.16] font-extrabold tracking-[-0.012em] sm:text-6xl lg:text-7xl">
             When buyers ask AI for recommendations, does your brand show up—or
             your competitors?
           </h1>
@@ -68,7 +69,7 @@ function Home() {
       </section>
 
       <div className="border-y border-border py-4">
-        <div className="overflow-hidden">
+        <div className="overflow-hidden" aria-hidden="true">
           <div className="marquee-track flex w-max gap-10 px-6 text-xs font-medium tracking-[0.18em] text-subtle uppercase">
             {[...ENGINES, ...ENGINES].map((engine, i) => (
               <span key={`${engine}-${i}`} className="flex items-center gap-10">
@@ -93,7 +94,7 @@ function Home() {
               <p className="text-xs tracking-[0.18em] text-muted uppercase">
                 Services
               </p>
-              <h2 className="mt-2 font-display text-3xl font-bold tracking-[-0.04em] sm:text-5xl">
+              <h2 className="mt-2 font-display text-3xl font-bold tracking-[-0.012em] sm:text-5xl">
                 Discovery, engineered.
               </h2>
             </div>
@@ -131,7 +132,7 @@ function Home() {
           <p className="text-xs tracking-[0.18em] text-muted uppercase">
             Case studies
           </p>
-          <h2 className="mt-2 max-w-3xl font-display text-3xl font-bold tracking-[-0.04em] sm:text-5xl">
+          <h2 className="mt-2 max-w-3xl font-display text-3xl font-bold tracking-[-0.012em] sm:text-5xl">
             Client products, in the browser.
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-subtle">{WORK_DISCLAIMER}</p>
@@ -178,7 +179,7 @@ function Home() {
             <p className="text-xs tracking-[0.18em] text-muted uppercase">
               Why APE X
             </p>
-            <h2 className="mt-2 font-display text-3xl font-bold tracking-[-0.04em] sm:text-5xl">
+            <h2 className="mt-2 font-display text-3xl font-bold tracking-[-0.012em] sm:text-5xl">
               Apex ape. Unknown variable.
             </h2>
             <p className="mt-5 leading-relaxed text-muted">
@@ -217,7 +218,7 @@ function Home() {
       <section className="px-5 py-16 sm:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="flex items-end justify-between">
-            <h2 className="font-display text-3xl font-bold tracking-[-0.04em]">
+            <h2 className="font-display text-3xl font-bold tracking-[-0.012em]">
               Resources
             </h2>
             <Link to="/resources" className="text-sm text-muted hover:text-foreground">
@@ -245,7 +246,7 @@ function Home() {
 
       <section className="px-5 py-16 sm:px-8">
         <div className="mx-auto max-w-3xl">
-          <h2 className="font-display text-3xl font-bold tracking-[-0.04em]">
+          <h2 className="font-display text-3xl font-bold tracking-[-0.012em]">
             Direct answers
           </h2>
           <Accordion type="single" collapsible className="mt-4">
