@@ -1,1 +1,1 @@
-export * from "./resources-data";
+export * from "../../copy/resources";
