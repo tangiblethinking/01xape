@@ -24,9 +24,9 @@ function ThemeToggle() {
     >
       <span className="relative size-5">
         {theme === "light" ? (
-          <Sun className="size-5" />
+          <Sun className="size-5" aria-hidden="true" />
         ) : (
-          <Moon className="size-5" />
+          <Moon className="size-5" aria-hidden="true" />
         )}
       </span>
     </button>
@@ -39,9 +39,9 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-40 px-3 pt-3 sm:px-4">
+    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4">
       <div className="pointer-events-auto mx-auto flex max-w-6xl items-center gap-2">
-        <nav className="glass specular flex min-h-14 flex-1 items-center gap-2 rounded-full py-1.5 pr-1.5 pl-2 sm:pl-3">
+        <nav className="glass-panel specular flex min-h-14 flex-1 items-center gap-2 rounded-full py-1.5 pr-1.5 pl-2 sm:pl-3" aria-label="Primary">
           <Link
             to="/"
             className="flex min-h-11 items-center gap-2 rounded-full px-1.5"
@@ -69,22 +69,32 @@ export function Header() {
                   <Link
                     to={item.href as "/"}
                     className={cn(
-                      "flex h-11 items-center rounded-full px-3.5 text-sm font-medium text-muted hover:text-foreground",
+                      "flex h-11 items-center rounded-full px-3.5 text-sm font-medium tracking-[0.01em] text-foreground/90 hover:text-foreground",
                       pathname.startsWith(item.href) && "text-foreground",
                     )}
+                    aria-haspopup="true"
                   >
                     {item.label}
                   </Link>
-                  <div className="invisible absolute top-full left-0 pt-2 opacity-0 transition-[opacity,transform] duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                    <div className="glass specular min-w-64 rounded-2xl p-2">
-                          {item.children.map((child) => (
+                  <div className="invisible absolute top-full left-0 z-50 pt-2 opacity-0 transition-[opacity] duration-150 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                    <div
+                      className="glass-panel min-w-72 rounded-2xl p-2"
+                      role="menu"
+                      aria-label={item.label}
+                    >
+                      {item.children.map((child) => (
                         <Link
                           key={child.href}
                           to={child.href as "/"}
-                          className="block rounded-xl px-3 py-2.5 hover:bg-foreground/6"
+                          role="menuitem"
+                          className="block rounded-xl px-3 py-3 hover:bg-foreground/8 focus-visible:bg-foreground/8"
                         >
-                          <div className="text-sm font-medium">{child.label}</div>
-                          <div className="text-xs text-muted">{child.hint}</div>
+                          <div className="text-sm font-semibold tracking-[0.01em] text-foreground">
+                            {child.label}
+                          </div>
+                          <div className="mt-0.5 text-xs leading-relaxed tracking-[0.01em] text-muted">
+                            {child.hint}
+                          </div>
                         </Link>
                       ))}
                     </div>
@@ -95,7 +105,7 @@ export function Header() {
                   key={item.href}
                   to={item.href as "/"}
                   className={cn(
-                    "flex h-11 items-center rounded-full px-3.5 text-sm font-medium text-muted hover:text-foreground",
+                    "flex h-11 items-center rounded-full px-3.5 text-sm font-medium tracking-[0.01em] text-foreground/90 hover:text-foreground",
                     pathname.startsWith(item.href) && "text-foreground",
                   )}
                 >
@@ -116,14 +126,15 @@ export function Header() {
                   type="button"
                   className="flex size-11 items-center justify-center rounded-full lg:hidden"
                   aria-label="Open menu"
+                  aria-expanded={open}
                 >
-                  <Menu className="size-5" />
+                  <Menu className="size-5" aria-hidden="true" />
                 </button>
               </SheetTrigger>
-              <SheetContent side="bottom" className="max-h-[88dvh] overflow-y-auto">
+              <SheetContent side="bottom" className="glass-panel max-h-[88dvh] overflow-y-auto">
                 <SheetTitle className="sr-only">Menu</SheetTitle>
                 <div className="mb-4 flex items-center gap-2">
-                  <BrandMark variant="icon" className="h-8 w-7" />
+                  <BrandMark variant="icon" className="h-8 w-7" alt="" />
                   <WordmarkText className="text-xl" />
                 </div>
                 <div className="flex flex-col gap-1 pb-8">
@@ -141,7 +152,7 @@ export function Header() {
                           {item.children.map((child) => (
                             <Link
                               key={child.href}
-                          to={child.href as "/"}
+                              to={child.href as "/"}
                               onClick={() => setOpen(false)}
                               className="flex min-h-11 items-center text-sm text-muted"
                             >

@@ -160,6 +160,18 @@ html.dark {
   box-shadow: var(--shadow-glass-value);
 }
 
+@utility glass-panel {
+  isolation: isolate;
+  background: color-mix(in oklab, var(--bg) 88%, transparent);
+  backdrop-filter: blur(28px) saturate(1.5);
+  -webkit-backdrop-filter: blur(28px) saturate(1.5);
+  box-shadow: var(--shadow-glass-value);
+}
+
+html.dark .glass-panel {
+  background: color-mix(in oklab, #0c0c0e 92%, transparent);
+}
+
 @utility specular {
   position: relative;
 }
