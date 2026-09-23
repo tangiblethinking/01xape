@@ -35,7 +35,6 @@ function ThemeToggle() {
 
 export function Header() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const isHome = pathname === "/";
   const [open, setOpen] = useState(false);
 
   return (
@@ -47,19 +46,8 @@ export function Header() {
             className="flex min-h-11 items-center gap-2 rounded-full px-1.5"
             aria-label="APE X home"
           >
-            <BrandMark variant="icon" className="h-8 w-7" alt="" />
-            {isHome ? (
-              <WordmarkText className="text-lg sm:text-xl" />
-            ) : (
-              <BrandMark
-                variant="wordmark"
-                className="hidden h-5 w-[7.5rem] sm:inline-block"
-                alt="APE X"
-              />
-            )}
-            {!isHome && (
-              <WordmarkText className="text-lg sm:hidden" />
-            )}
+            <BrandMark variant="icon" className="h-8 w-7 shrink-0" alt="" />
+            <WordmarkText className="text-lg sm:text-xl" />
           </Link>
 
           <div className="ml-auto hidden items-center gap-0.5 lg:flex">
